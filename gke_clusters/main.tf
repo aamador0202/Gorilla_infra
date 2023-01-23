@@ -1,5 +1,5 @@
-resource "google_service_account" "default" {
-  account_id   = "service-account-id"
+resource "google_service_account" "tf_sa" {
+  account_id   = "tf-gorilla-infra-sa"
   display_name = "Service Account"
 }
 
@@ -9,7 +9,7 @@ resource "google_container_cluster" "primary" {
   initial_node_count = 3
   node_config {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    service_account = google_service_account.default.email
+    service_account = google_service_account.tf_sa.email
     oauth_scopes = [
       "https://www.googleapis.com/auth/cloud-platform"
     ]
