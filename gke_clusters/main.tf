@@ -1,7 +1,7 @@
 resource "google_service_account" "tf_sa" {
   account_id   = "tf-gorilla-infra-sa"
   display_name = "Service Account"
-  project = "Gorilla"
+  project = "gorilla-375616"
 }
 
 resource "google_container_cluster" "primary" {
