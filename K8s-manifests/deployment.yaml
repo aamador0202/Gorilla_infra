@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-off-app
+spec:
+  selector:
+    matchLabels:
+      app: time-off-app
+  template:
+    metadata:
+      labels:
+        app: time-off-app
+    spec:
+      containers:
+      - name: time-off-app
+        image: gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest
+        ports:
+          - containerPort: 3000
