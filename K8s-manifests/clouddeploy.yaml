@@ -15,4 +15,4 @@ metadata:
  name: qsdev
 description: development cluster
 gke:
- cluster: projects/gorilla-375616/locations/us-central1/clusters/to-managment-gke
+ cluster: projects/gorilla-375616/locations/us-central1-a/clusters/to-managment-gke
