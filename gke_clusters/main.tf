@@ -1,10 +1,12 @@
 resource "google_service_account" "tf_sa" {
   account_id   = "tf-gorilla-infra-sa"
   display_name = "Service Account"
+  project = "Gorilla"
 }
 
 resource "google_container_cluster" "primary" {
-  name               = "marcellus-wallace"
+  name               = "to-managment-gke"
+  project            = "Gorilla"
   location           = "us-central1-a"
   initial_node_count = 3
   node_config {
