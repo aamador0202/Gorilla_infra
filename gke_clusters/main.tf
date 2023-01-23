@@ -6,7 +6,7 @@ resource "google_service_account" "tf_sa" {
 
 resource "google_container_cluster" "primary" {
   name               = "to-managment-gke"
-  project            = "Gorilla"
+  project            = "gorilla-375616"
   location           = "us-central1-a"
   initial_node_count = 3
   node_config {
