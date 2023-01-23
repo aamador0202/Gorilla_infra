@@ -1,0 +1,18 @@
+apiVersion: deploy.cloud.google.com/v1
+kind: DeliveryPipeline
+metadata:
+ name: time-off-app
+description: main application pipeline
+serialPipeline:
+ stages:
+ - targetId: qsdev
+   profiles: []
+---
+
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+ name: qsdev
+description: development cluster
+gke:
+ cluster: projects/gorilla-375616/locations/us-central1/clusters/to-managment-gke
