@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest', '.' ]
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - > 
+    gcloud deploy releases create release-$BUILD_ID
+    --delivery-pipeline=time-off-app
+    --region=us-central1
+    --source=./
+    --images=image1=gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest    
+images: ['gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest']    
