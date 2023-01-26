@@ -4,6 +4,7 @@ kind: Deployment
 metadata:
   name: time-off-app
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: time-off-app
