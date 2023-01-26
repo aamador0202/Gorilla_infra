@@ -1,6 +1,6 @@
 resource "google_clouddeploy_target" "primary" {
   location = "us-central1"
-  name     = "qsdev"
+  name     = "dev"
 
   description = "development cluster"
 
@@ -13,13 +13,13 @@ resource "google_clouddeploy_target" "primary" {
 
 resource "google_clouddeploy_delivery_pipeline" "primary" {
   location = "us-central1"
-  name     = "time-off-app"
+  name     = "tf-time-off-app"
   project = "gorilla-375616
 
   serial_pipeline {
     stages {
       profiles  = []
-      target_id = "qsdev"
+      target_id = "dev"
     }
   }
 }
