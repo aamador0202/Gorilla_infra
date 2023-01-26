@@ -1,5 +1,5 @@
 resource "google_cloudbuild_trigger" "tf-trigger" {
-  location = "us-central1"
+  location = "global"
   project = "gorilla-375616"
   name = "tf-trigger"
 
