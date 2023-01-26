@@ -14,7 +14,7 @@ resource "google_clouddeploy_target" "primary" {
 resource "google_clouddeploy_delivery_pipeline" "primary" {
   location = "us-central1"
   name     = "tf-time-off-app"
-  project = "gorilla-375616
+  project = "gorilla-375616"
 
   serial_pipeline {
     stages {
