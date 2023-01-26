@@ -7,7 +7,7 @@ steps:
   - '-c'
   - > 
     gcloud deploy releases create release-$BUILD_ID
-    --delivery-pipeline=time-off-app
+    --delivery-pipeline=tf-time-off-app
     --region=us-central1
     --source=./
     --images=image1=gcr.io/gorilla-375616/github.com/aamador0202/timeoff-management-application:latest    
