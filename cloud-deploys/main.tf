@@ -21,4 +21,5 @@ resource "google_clouddeploy_delivery_pipeline" "primary" {
       profiles  = []
       target_id = "dev"
     }
+  }  
 }
