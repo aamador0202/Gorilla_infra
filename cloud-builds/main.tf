@@ -1,5 +1,6 @@
 resource "google_cloudbuild_trigger" "Trigger1" {
   location = "us-central1"
+  project = "gorilla-375616"
 
   trigger_template {
     branch_name = "master"
